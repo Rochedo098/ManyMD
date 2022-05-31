@@ -1,0 +1,22 @@
+{
+  "name": "manymd",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "tauri": "tauri",
+    "build": "tauri build",
+    "vite:dev": "vite",
+    "vite:build": "vite build"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^1.0.0-rc.6",
+    "@vue/cli-service": "^5.0.4",
+    "vue": "^3.2.36",
+    "vue-router": "^4.0.15"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^1.0.0-rc.13",
+    "@vitejs/plugin-vue": "^2.3.3",
+    "vite": "^2.9.9"
+  }
+}

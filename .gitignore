@@ -1,0 +1,35 @@
+# Ignore OSX files
+.DS_Store
+
+# Ignore cargo files
+**/target/
+Cargo.lock
+**/*.rs.bk
+
+# Ignore idea files
+**/.idea/
+*.iml
+*.ipr
+*.iws
+
+# Ignore vscode files
+**/.vscode/
+
+# Ignore node files
+**/node_modules/
+**/dist/
+package-lock.json
+
+# Ignore local env files
+**/*.local
+
+# Ignore log files
+logs
+*.log
+npm-debug.log*
+
+# Ignore Vue files
+**/dist
+
+# Ignore others useless files
+**.mybkp
