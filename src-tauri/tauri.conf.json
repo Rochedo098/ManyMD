@@ -1,27 +1,25 @@
 {
   "$schema": "..\\node_modules/@tauri-apps/cli\\schema.json",
-  "build": {
-    "beforeBuildCommand": "",
-    "beforeDevCommand": "",
-    "devPath": "http://localhost:3000",
-    "distDir": "../dist"
-  },
   "package": {
     "productName": "manymd",
     "version": "0.1.0"
   },
+  "build": {
+    "beforeBuildCommand": "npm run vite:build",
+    "beforeDevCommand": "npm run vite:dev",
+    "devPath": "http://localhost:3000",
+    "distDir": "../dist"
+  },
   "tauri": {
-    "allowlist": {
-      "all": true
-    },
     "bundle": {
       "active": true,
-      "category": "Game",
-      "copyright": "",
-      "deb": {
-        "depends": []
-      },
-      "externalBin": [],
+      "targets": [
+        "dmg",
+        "deb",
+        "appimage",
+        "msi"
+      ],
+      "identifier": "com.github.rochedo098.manymd",
       "icon": [
         "icons/32x32.png",
         "icons/128x128.png",
@@ -29,29 +27,37 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "com.github.rochedo098.manymd",
-      "longDescription": "",
-      "macOS": {
-        "entitlements": null,
-        "exceptionDomain": "",
-        "frameworks": [],
-        "providerShortName": null,
-        "signingIdentity": null
-      },
       "resources": [],
+      "externalBin": [],
+      "copyright": "",
+      "category": "Game",
       "shortDescription": "",
-      "targets": "all",
+      "longDescription": "",
+      "deb": {
+        "depends": []
+      },
+      "macOS": {
+        "frameworks": [],
+        "minimumSystemVersion": "",
+        "exceptionDomain": "",
+        "signingIdentity": null,
+        "providerShortName": null,
+        "entitlements": null
+      },
       "windows": {
         "certificateThumbprint": null,
         "digestAlgorithm": "sha256",
         "timestampUrl": ""
       }
     },
-    "security": {
-      "csp": null
-    },
     "updater": {
       "active": false
+    },
+    "allowlist": {
+      "all": true
+    },
+    "security": {
+      "csp": "default-src blob: data: filesystem: ws: wss: http: https: tauri: 'unsafe-eval' 'unsafe-inline' 'self' img-src: 'self'"
     },
     "windows": [
       {

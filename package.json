@@ -5,8 +5,11 @@
   "scripts": {
     "tauri": "tauri",
     "build": "tauri build",
+    "dev": "tauri dev",
     "vite:dev": "vite",
-    "vite:build": "vite build"
+    "vite:host": "vite --host",
+    "vite:build": "vite build",
+    "vite:preview": "vite preview --host"
   },
   "dependencies": {
     "@tauri-apps/api": "^1.0.0-rc.6",
