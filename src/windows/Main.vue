@@ -1,26 +1,17 @@
-<template>
-    <section id="main">
+<script setup>
+    import Sidebar from '@/components/Sidebar.vue'
+    import InstancesGrid from '@/components/instances/InstanceGrid.vue';
+</script>
 
-    </section>
+<template>
+    <Sidebar />
+    <InstancesGrid />
 </template>
 
 <style scoped>
-    section#main {
-        /* SIZE */
-        width: 100%;
-        height: 100%;
-
-        /* GRID */
-        display: grid;
-        grid-template-areas:
-        'n001 s001 s001 s001 s001 s001 s001'
-        'n001 s001 s001 s001 s001 s001 s001'
-        'n001 s001 s001 s001 s001 s001 s001'
-        'n001 s001 s001 s001 s001 s001 s001'
-        'n001 s001 s001 s001 s001 s001 s001';
-        /*
-            n001 = navbar
-            s001 = space01
-        */
+    section {
+        margin: 0 150px 0 0;
+        padding: 8px;
+        position: fixed;
     }
 </style>

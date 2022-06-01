@@ -8,6 +8,7 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <style>
     @import '@/assets/theme.css';
+    @import 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css';
 
     html {
         width: 100%;
@@ -23,5 +24,11 @@ import { RouterLink, RouterView } from 'vue-router'
     body {
         background: var(--background);
         color: var(--font);
+    }
+
+    div#app {
+        position: fixed;
+        width: 100%;
+        height: 100%;
     }
 </style>
