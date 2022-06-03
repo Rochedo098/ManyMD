@@ -1,5 +1,10 @@
-<script setup>
-import { RouterLink, RouterView } from 'vue-router'
+<script>
+    import { RouterView } from 'vue-router'
+    export default {
+        components: {
+            RouterView
+        }
+    }
 </script>
 
 <template>

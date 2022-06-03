@@ -1,5 +1,6 @@
 # Ignore OSX files
 .DS_Store
+WixTools
 
 # Ignore cargo files
 **/target/

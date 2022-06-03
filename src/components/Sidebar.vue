@@ -1,9 +1,3 @@
-<script>
-    export default {
-
-    }
-</script>
-
 <template>
     <div class="d-flex flex-column flex-shrink-0 p-3" id="sidebar">
         <a class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none">
@@ -51,7 +45,7 @@
         </ul>
         <hr>
         <div>
-            <a href="#" class="d-flex align-items-center link-dark text-decoration-none " aria-expanded="false">
+            <a href="/settings" class="d-flex align-items-center text-decoration-none " aria-expanded="false">
                 <img src="" alt="" width="24" height="24" class="rounded-circle me-2">
                 <strong> Settings </strong>
             </a>
@@ -72,6 +66,10 @@
         padding: 4px !important;
 
         font-size: 14px;
+    }
+
+    a {
+        cursor: pointer;
     }
 
     hr {

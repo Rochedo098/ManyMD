@@ -1,8 +1,10 @@
-<script setup>
-    defineProps({
-        name: String,
-        thumb: String
-    })
+<script>
+    export default {
+        props: {
+            name: String,
+            thumb: String
+        }
+    }
 </script>
 
 <template>
