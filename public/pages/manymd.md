@@ -1,0 +1,1 @@
+# ManyMD Config

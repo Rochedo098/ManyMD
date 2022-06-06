@@ -1,3 +1,13 @@
+<script>
+    import { getLang } from '@/scripts/lang.js'
+    export default {
+        methods: {
+            getLang
+        }
+    }
+</script>
+
+
 <template>
     <div class="d-flex flex-column flex-shrink-0 p-3" id="sidebar">
         <a class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none">
@@ -7,7 +17,7 @@
         <ul class="nav nav-pills flex-column mb-auto">
           <li class="nav-item">
             <a class="nav-link" aria-current="page">
-                Launch
+                {{ getLang("main.sidebar.launch") }}
             </a>
           </li>
 
@@ -15,17 +25,17 @@
           
           <li>
             <a class="nav-link">
-                Edit Instance
+                {{ getLang("main.sidebar.edit_instance") }}
             </a>
           </li>
           <li>
             <a class="nav-link">
-              View Mods
+                {{ getLang("main.sidebar.view_mods") }}
             </a>
           </li>
           <li>
             <a class="nav-link">
-              View Folder
+                {{ getLang("main.sidebar.view_folder") }}
             </a>
           </li>
 
@@ -33,13 +43,13 @@
 
           <li>
             <a class="nav-link">
-                Export Instance
+                {{ getLang("main.sidebar.export_instance") }}
             </a>
             <a class="nav-link">
-                Delete Instance
+                {{ getLang("main.sidebar.delete_instance") }}
             </a>
             <a class="nav-link">
-                Copy Instance
+                {{ getLang("main.sidebar.copy_instance") }}
             </a>
           </li>
         </ul>
@@ -47,7 +57,7 @@
         <div>
             <a href="/settings" class="d-flex align-items-center text-decoration-none " aria-expanded="false">
                 <img src="" alt="" width="24" height="24" class="rounded-circle me-2">
-                <strong> Settings </strong>
+                <strong> {{ getLang("main.sidebar.settings") }} </strong>
             </a>
         </div>
     </div>
@@ -70,6 +80,13 @@
 
     a {
         cursor: pointer;
+        
+        -webkit-touch-callout: none;
+          -webkit-user-select: none;
+           -khtml-user-select: none;
+             -moz-user-select: none;
+              -ms-user-select: none;
+                  user-select: none;
     }
 
     hr {

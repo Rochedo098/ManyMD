@@ -8,29 +8,26 @@
 </script>
 
 <template>
-    <div class="body">
-        <img :src="thumb" width="256" height="144">
+    <div class="item">
+        <img :src="thumb" width="64" height="64">
         <div class="infos">
-            <h1> {{ name }} </h1>
+            <a> {{ name }} </a>
         </div>
     </div>
 </template>
 
 <style scoped>
-    div.body {
-        border: 1px solid var(--lines);
-        border-radius: 12px;
+    div.item {
+        cursor: default;
+    }
 
-        margin: 2px;
-        /* padding: 2px; */
-        height: 160px
+    div.item:hover {
+        text-decoration: underline;
     }
 
     div.infos {
-        display: inline-block;
+        display: block;
         position: relative;
-        margin-left: 5px;
-        vertical-align: top;
     }
 
     * {
@@ -41,20 +38,22 @@
         display: inline-block;
         border: 1px solid var(--lines);
         border-radius: 12px;
-        margin-left: 5px;
-        margin-top: 6px
     }
 
-    h1, p {
+    h1, a {
         margin: 0;
         padding: 0;
     }
-
-    h1 {
-        font-weight: bolder;   
-    }
-    
+ 
     a {
         text-decoration: none;
+        font-size: 15px;
+
+        -webkit-touch-callout: none;
+          -webkit-user-select: none;
+           -khtml-user-select: none;
+             -moz-user-select: none;
+              -ms-user-select: none;
+                  user-select: none;
     }
 </style>
