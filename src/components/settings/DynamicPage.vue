@@ -1,32 +1,14 @@
 <script>
-    import { Converter } from 'showdown'
     export default {
-        computed: {
-            page() {
-                return this.$route.query.page
-            }
-        },
-        methods: {
-            tomd(url) {
-                fetch(url)
-                    .then(response => response.text())
-                    .then(data => {
-                        if (!data) data = '## Not Found'
-                        
-                        var converter = new Converter(),
-                        html = converter.makeHtml(data);
-                        
-                        if (!html) console.error("ERROR: html variable is null")
-                        document.getElementById('main').innerHTML = html 
-                    });
-            }
+        components: {
+            Dynamic: () => import('@/windows/settings/ManyMD.vue')
         }
     }
 </script>
 
 <template>
     <div id="main">
-        {{ tomd(`http://localhost:8080/pages/${page}.md`) }}
+        <Dynamic />
     </div>
 </template>
 

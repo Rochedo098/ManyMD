@@ -1,11 +1,11 @@
 <script>
     import Sidebar from '@/components/settings/Sidebar.vue'
-import DynamicPage from '@/components/settings/DynamicPage.vue'
+    import DynamicPage from '@/components/settings/DynamicPage.vue'
     export default {
         components: {
-    Sidebar,
-    DynamicPage
-}    
+            Sidebar,
+            DynamicPage
+        }    
     }
 </script>
 

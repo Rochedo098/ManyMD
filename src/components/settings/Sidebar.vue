@@ -2,6 +2,11 @@
     <div class="d-flex flex-column flex-shrink-0 p-3" id="sidebar">
         <ul class="nav nav-pills flex-column mb-auto">
           <li>
+            <a class="nav-link" href='/'>
+                <b>⮨</b>
+            </a>
+          </li>
+          <li>
             <a class="nav-link" href='/settings?page=manymd'>
                 ManyMD
             </a>

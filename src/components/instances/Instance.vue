@@ -3,15 +3,29 @@
         props: {
             name: String,
             thumb: String
+        },
+        methods: {
+            select(id) {
+                const element = document.getElementsByClassName('toaffect')
+                for (var i = 0; i < element.length; i++) {
+                    if (!element[i].classList.contains('selected') && element[i].parentElement.id == id) {
+                        element[i].classList.add('selected')
+                    } else {
+                        element[i].classList.remove('selected')
+                    }
+                }
+            }
         }
     }
 </script>
 
 <template>
-    <div class="item">
-        <img :src="thumb" width="64" height="64">
-        <div class="infos">
-            <a> {{ name }} </a>
+    <div class="item" @click="select(`Instance-${name}`)">
+        <div>
+            <img :src="thumb" width="64" height="64">
+            <div class="infos">
+                <a> {{ name }} </a>
+            </div>
         </div>
     </div>
 </template>
@@ -55,5 +69,9 @@
              -moz-user-select: none;
               -ms-user-select: none;
                   user-select: none;
+    }
+
+    .selected {
+        background: blue;
     }
 </style>

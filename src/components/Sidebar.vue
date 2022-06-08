@@ -55,7 +55,7 @@
         </ul>
         <hr>
         <div>
-            <a href="/settings" class="d-flex align-items-center text-decoration-none " aria-expanded="false">
+            <a href="/settings?page=manymd" class="d-flex align-items-center text-decoration-none " aria-expanded="false">
                 <img src="" alt="" width="24" height="24" class="rounded-circle me-2">
                 <strong> {{ getLang("main.sidebar.settings") }} </strong>
             </a>
